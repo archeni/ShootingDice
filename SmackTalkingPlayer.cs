@@ -1,10 +1,18 @@
+using System;
+
 namespace ShootingDice
 {
-    // TODO: Complete this class
+  // TODO: Complete this class
 
-    // A Player who shouts a taunt every time they roll dice
-    public class SmackTalkingPlayer
+  // A Player who shouts a taunt every time they roll dice
+  public class SmackTalkingPlayer : Player
+  {
+    public string Taunt { get; } = "You SUCK!!";
+
+    public override int Roll()
     {
-        public string Taunt { get; }
+      Console.WriteLine(Taunt);
+      return base.Roll();
     }
+  }
 }
