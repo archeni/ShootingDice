@@ -24,6 +24,18 @@ namespace ShootingDice
 
       player3.Play(player2);
 
+      SoreLoserPlayer player5 = new SoreLoserPlayer();
+      player5.Name = "Steve";
+
+      try
+      {
+        player5.Play(player3);
+      }
+      catch
+      {
+        Console.WriteLine("He cheated!!");
+      }
+
       Console.WriteLine("-------------------");
 
       Player large = new LargeDicePlayer();
