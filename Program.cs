@@ -49,10 +49,11 @@ namespace ShootingDice
       Console.WriteLine("-------------------");
 
       List<Player> players = new List<Player>() {
-                player1, player2, player3, large, player4
+                player1, player2, player3, large, player4, player5
             };
 
       PlayMany(players);
+
     }
 
     static void PlayMany(List<Player> players)
@@ -81,7 +82,15 @@ namespace ShootingDice
         // Make adjacent players play noe another
         Player player1 = shuffledPlayers[i];
         Player player2 = shuffledPlayers[i + 1];
-        player1.Play(player2);
+        try
+        {
+          player1.Play(player2);
+
+        }
+        catch (SoreLoserException ex)
+        {
+          Console.WriteLine(ex.ToString());
+        }
       }
     }
   }
