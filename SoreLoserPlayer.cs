@@ -10,7 +10,6 @@ namespace ShootingDice
   {
     public override void Play(Player other)
     {
-      Console.Write("Please enter a Roll: ");
       int myRoll = Roll();
       int otherRoll = other.Roll();
 

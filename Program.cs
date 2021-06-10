@@ -48,8 +48,25 @@ namespace ShootingDice
 
       Console.WriteLine("-------------------");
 
+      UpperHalfPlayer player6 = new UpperHalfPlayer();
+      player6.Name = "Derek";
+
+      SoreLoserUpperHalfPlayer player7 = new SoreLoserUpperHalfPlayer();
+      player7.Name = "Paul";
+
+      try
+      {
+        player7.Play(player6);
+      }
+      catch
+      {
+        Console.WriteLine("He cheated!!");
+      }
+
+      Console.WriteLine("-------------------");
+
       List<Player> players = new List<Player>() {
-                player1, player2, player3, large, player4, player5
+                player1, player2, player3, large, player4, player5, player6, player7
             };
 
       PlayMany(players);
